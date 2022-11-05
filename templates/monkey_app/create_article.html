@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content">
+    <div class="main">
+        <h3>Тут пока дизайна тоже маловато</h3>
+        <div class="form_space">
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Добавить">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

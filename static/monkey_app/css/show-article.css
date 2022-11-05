@@ -1,0 +1,24 @@
+.show-article-img {
+    max-width: 500px;
+}
+
+.warning {
+    text-align: center;
+}
+
+.back-button {
+    position: fixed;
+    z-index: 1;
+    opacity: 100%;
+    /* background-color: rgb(129, 129, 129); */
+    display: block;
+    width: 280px;
+    text-align: center;
+    height: 84%;
+    font-size: 30px;
+}
+
+.show-article-container {
+    text-align: center;
+    word-break: break-all;
+}
