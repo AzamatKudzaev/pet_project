@@ -1,11 +1,11 @@
-
-from django.shortcuts import render, get_object_or_404
+from django.db.models import Count
 from django.http import HttpResponse, HttpResponseRedirect
-from monkey_app.models import Article, Profile
-from django.db.models import Sum, Max, Min, Count, Avg, Value
-from .forms import ArticleForm
+from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
-# Create your views here.f
+
+from monkey_app.models import Article
+from .forms import ArticleForm
+
 
 def main(request):
     articles = Article.objects.filter(publication=True)
