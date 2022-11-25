@@ -1,0 +1,43 @@
+.field {
+    min-height: 50px;
+}
+
+.text-field {
+    
+}
+
+textarea {
+    resize: none;
+}
+
+textarea, input, button, option, select {
+    background-color: rgb(66, 65, 65);
+    border-radius: 20px 20px;
+}
+
+#send-button {
+    display: inline-block;
+    width: 250px;
+    background-color: dimgrey;
+}
+
+.errorlist {
+    display: inline-block;
+}
+
+.label_tag {
+    display: inline-block;
+}
+
+.errorlist li {
+    color: orangered;
+}
+
+.text-field textarea {
+    width: 70%;
+    min-height: 500px;
+}
+
+.title-field input {
+    width: 60%;
+}

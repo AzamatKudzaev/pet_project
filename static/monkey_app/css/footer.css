@@ -1,0 +1,7 @@
+.footer {
+    position: relative;
+    height: 50px;
+    margin: 20px 0 0 0;
+    text-align: center;
+    border-top: solid 2px rgb(32, 32, 32);
+}
