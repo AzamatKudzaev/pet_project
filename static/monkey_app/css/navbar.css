@@ -79,3 +79,9 @@
 .indent {
     min-height: 150px;
 }
+
+.login-register {
+    position: absolute;
+    right: -2px;
+    top: -20px
+}

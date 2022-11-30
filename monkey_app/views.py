@@ -28,7 +28,7 @@ def about_us(request):
 
 
 def articles_view(request):
-    articles = Article.objects.filter(publication=True)
+    articles = Article.objects.order_by('-pub_date').filter(publication=True)
     agg = articles.aggregate(Count('pk'))
     context = {
         'articles': articles,
@@ -84,3 +84,12 @@ def edit_article(request, id_article):
         'article': article
     }
     return render(request, 'monkey_app/create_article.html', context=context)
+
+
+def login(request):
+    
+    return render(request, 'monkey_app/login.html')
+
+    
+def register(request):
+    return render(request, 'monkey_app/register.html')

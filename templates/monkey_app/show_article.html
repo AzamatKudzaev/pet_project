@@ -6,17 +6,19 @@
         <div class="main">
             <div class="show-article-container">
             <a href="{% url 'edit-article' id_article=article.pk %}" class="edit-article-link">Редактровать статью</a>
-            <div class="show-article" >
-                <h2>{{article.title}}</h2>
-                <p>{{article.text}}</p>
-                {% if article.image %}
-                        <img class="show-article-img" src="{{article.image.url}}">
-                {% endif %}
-                <p>Дата изменения - {{article.change_date}}</p>
-                <p>Количество просмотров - {{article.article_views}}</p>
-                <p><a href="#">Нравится(Пока делается)</a> - {{article.article_likes}}</p>
-                <p><a href="#">Не нравится(Пока делается)</a> - {{article.article_dislikes}}</p>
-            </div>
+                <div class="show-article" >
+                    <h2>{{article.title}}</h2>
+                    <p>{{article.text}}</p>
+                    {% if article.image %}
+                            <img class="show-article-img" src="{{article.image.url}}">
+                    {% endif %}
+                    <p>Дата изменения - {{article.change_date}}</p>
+                    <p>Количество просмотров - {{article.article_views}}</p>
+                    <form>
+                        <button type="button" class="like-button">Like</button>{{article.article_likes}}<br>
+                        <button type="button" class="dislike-button">Dislike</button>{{article.article_dislikes}}
+                    </form>
+                </div>
             </div>
         </div>
     </div>

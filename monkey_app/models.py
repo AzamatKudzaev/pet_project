@@ -30,10 +30,10 @@ class Profile(models.Model):
 class Article(models.Model):
 
     ARTICLES_KINDS = {
-        (0, 'Not selected'),
-        (1, 'Scientific'),
-        (2, 'Review'),
-        (3, 'Informational')
+        ('Not selected', 'Not selected'),
+        ('Scientific', 'Scientific'),
+        ('Review', 'Review'),
+        ('Informational', 'Informational')
     }
 
     profile = models.ForeignKey(
@@ -48,9 +48,9 @@ class Article(models.Model):
     article_likes = models.IntegerField(blank=True, null=True, default=0)
     article_dislikes = models.IntegerField(blank=True, null=True, default=0)
     article_kind = models.CharField(
-        max_length=20,
+        max_length=25,
         choices=ARTICLES_KINDS,
-        default=0
+        default='NS'
     )
 
     def __str__(self):
